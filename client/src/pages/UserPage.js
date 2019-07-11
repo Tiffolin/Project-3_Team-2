@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-// import { Col, Row, Container } from "../components/Grid";
-import Wrapper from "../components/Wrapper";
-import { List, ListItem } from "../components/List";
-import { Link } from "react-router-dom";
+// import React from "react";
+import { Col, Row, Container } from "../components/Grid";
+// import Wrapper from "../components/Wrapper";
+// import { List, ListItem } from "../components/List";
+// import { Link } from "react-router-dom";
 import API from "../utils/API";
 import Login from "../components/Login";
 import Register from "../components/Register";
@@ -68,24 +69,33 @@ class User extends Component {
 
     render() {
         return (
-          <Wrapper>
-        
+          <Container>
+       
+            <Row>
+                <Col size="lg-4 sm-12">
+                
                   <Register
                     handleRegisterSubmit={this.handleRegisterSubmit}
                     handleRegisterChange={this.handleInputChange}
                     username={this.state.regusername}
                     password={this.state.regpassword}
                     />
-                     
+                  
+                  </Col>
+                          
+                <Col size="lg-4 sm-12">
+                
                   <Login
                     handleLoginSubmit={this.handleLoginSubmit}
                     handleLoginChange={this.handleInputChange}
                     username={this.state.logusername}
                     password={this.state.logpassword}
                     />
-         
+                  
+                </Col>
+            </Row>
 
-            </Wrapper>
+          </Container>
         )
     }
 }

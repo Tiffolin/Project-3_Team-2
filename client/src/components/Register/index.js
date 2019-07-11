@@ -5,8 +5,6 @@ import "./style.css";
 function Register(props) {
 return (
 
-
-
 <div className="register">
   <div className="register-container">
   <form className="register styleregister">

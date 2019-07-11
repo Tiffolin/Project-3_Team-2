@@ -3,8 +3,8 @@ import React, { Component } from "react"
 import ResposiveVoice from "../components/recipePage";
 import { Link } from "react-router-dom";
 import Bookmark from "../components/Bookmark";
-// import { Col, Row, Container } from "../components/Grid";
-import Wrapper from "../components/Wrapper";
+import {Container } from "../components/Grid";
+// import Wrapper from "../components/Wrapper";
 import "./style.css";
 import API from "../utils/API"
 //------------------------SPEECH RECOGNITION-----------------------------
@@ -172,7 +172,7 @@ class Speech extends Component {
 
     render() {
         return (
-            < Wrapper >
+            <Container>
                 <div className="container styleRecipeSelect">
 
                     {this.state.verified ? (
@@ -201,7 +201,7 @@ class Speech extends Component {
                         ingredients={this.state.ingredients}
                     />
                 </div>
-            </Wrapper >
+            </Container >
 
         )
     }

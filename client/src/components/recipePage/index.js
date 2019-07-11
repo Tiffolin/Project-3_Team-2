@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Col, Row, Container } from "../Grid";
+import {Container } from "../Grid";
 // import { Link } from "react-router-dom";
 import "./style.css";
 
