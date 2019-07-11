@@ -1,21 +1,16 @@
-.login-container{
-    /* position: absolute;
-    right:0px;
-    top:20px; */
-    float:left;
-
+.StyleloginWrap{
+    display:inline-block;
+    margin-top:20%;
+    /* margin-right:20%; */
     padding:20px;
-
-    border:2px solid white;
     background:rgba(0,0,0, .2);
+    border:2px solid white;
     border-radius:5px;
 }
 
 .styleLogin{
-
     border-radius:5px;
     padding:20px;
-
 }
 
 .login label{
@@ -35,7 +30,7 @@ margin-right:11px;
 
 
 @media only screen and (max-width: 640px) {
-    .login{
+    .StyleloginWrap{
         float:left;
     }
   };

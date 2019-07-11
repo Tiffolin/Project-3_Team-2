@@ -6,7 +6,7 @@ function Register(props) {
 return (
 
 <div className="register">
-  <div className="register-container">
+  <div className="register-container styleregisterWrap">
   <form className="register styleRegister">
             <div className="form-group">
                 <label htmlFor="title"><h4>REGISTER</h4></label>
