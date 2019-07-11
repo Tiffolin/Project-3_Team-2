@@ -3,8 +3,24 @@ const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const cookieParser = require('cookie-parser');
-const PORT = process.env.PORT || 3001;
+// const PORT = process.env.PORT || 3001;
 const app = express();
+//code needed to deployment to heroku
+const favicon = require('express-favicon');
+const path = require('path');
+const port = process.env.PORT || 8080;
+app.use(favicon(__dirname + '/build/favicon.ico'));
+// the __dirname is the current directory from where the script is running
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/ping', function (req, res) {
+ return res.send('pong');
+});
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
