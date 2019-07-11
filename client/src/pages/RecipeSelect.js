@@ -1,11 +1,11 @@
 
 import React, { Component } from "react"
+import "./style.css";
 import ResposiveVoice from "../components/recipePage";
 import { Link } from "react-router-dom";
 import Bookmark from "../components/Bookmark";
 import {Container } from "../components/Grid";
 // import Wrapper from "../components/Wrapper";
-import "./style.css";
 import API from "../utils/API"
 //------------------------SPEECH RECOGNITION-----------------------------
 
