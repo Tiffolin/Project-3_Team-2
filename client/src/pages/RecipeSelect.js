@@ -98,25 +98,24 @@ class Speech extends Component {
             //-------------------------COMMANDS------------------------------------
 
             const transcriptArr = finalTranscript.split(' ')
-            const stopCmd = transcriptArr.slice(-3, -2)
+            const stopCmd = transcriptArr.slice(-2)
             console.log('stopCmd -----', stopCmd);
          
-                console.log("   **********   " + stopCmd[0]);
                 if (stopCmd[0] === 'stop') {
                     recognition.stop();
                     recognition.onend = () => {
                         console.log('Stopped listening per command');
                         window.responsiveVoice.cancel();
                     }
-                } else if (transcriptArr.includes('pause')) {
+                } else if (stopCmd.includes('pause')) {
                         console.log(" ##########   pause works   ######### ");
                         recognition.stop();
                         window.responsiveVoice.pause();
 
-                } else if (transcriptArr.includes('play')) {
-                    recognition.onresult = () => {
+                } else if (stopCmd.includes('play')) {
                         console.log(" ##########   RESUME works   ######### ")
                         window.responsiveVoice.resume();
+                        recognition.end();
                     }   
                 }
         
