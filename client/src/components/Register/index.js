@@ -5,7 +5,7 @@ import "./style.css";
 function Register(props) {
 return (
 
-<div className="register">
+<div className="register styleformWrap">
   <div className="register-container styleregisterWrap">
   <form className="register styleRegister">
             <div className="form-group">

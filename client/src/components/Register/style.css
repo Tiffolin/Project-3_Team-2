@@ -1,16 +1,20 @@
-.styleregisterWrap{
-    display:inline-block;
+.styleformWrap{
     margin-top:20%;
-    /* margin-left:60px; */
-    padding:20px;
     background:rgba(0,0,0, .2);
     border:2px solid white;
+    border-radius:5px;
+}
+
+.styleregisterWrap{
+    display:inline-block;
+    padding:20px;
     border-radius:5px;
 }
 
 .styleRegister{
     border-radius:5px;
     padding:20px;
+    
 }
 
 .register label{
