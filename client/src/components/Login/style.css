@@ -9,12 +9,16 @@
 .StyleloginWrap{
     display:inline-block;
     padding:20px;
+    border-radius:5px;
+    background:#4c9a00;
+    opacity:0.9;
 }
 
 .styleLogin{
     border-radius:5px;
     padding:20px;
-    
+    /* background:#4c9a00;
+        opacity:0.9; */
 }
 
 .login label{
