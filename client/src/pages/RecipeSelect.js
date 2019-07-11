@@ -100,9 +100,7 @@ class Speech extends Component {
             const transcriptArr = finalTranscript.split(' ')
             const stopCmd = transcriptArr.slice(-3, -2)
             console.log('stopCmd -----', stopCmd);
-            // console.log(stopCmd[0]);
-            // console.log(stopCmd[1]);
-            // for (var i = 0; i < stopCmd.length; i++) {
+         
                 console.log("   **********   " + stopCmd[0]);
                 if (stopCmd[0] === 'stop') {
                     recognition.stop();
@@ -112,15 +110,16 @@ class Speech extends Component {
                     }
                 } else if (transcriptArr.includes('pause')) {
                         console.log(" ##########   pause works   ######### ");
-                        // recognition.stop();
+                        recognition.stop();
                         window.responsiveVoice.pause();
 
                 } else if (transcriptArr.includes('play')) {
-                
+                    recognition.onresult = () => {
                         console.log(" ##########   RESUME works   ######### ")
                         window.responsiveVoice.resume();
+                    }   
                 }
-            // }
+        
         }
 
         recognition.onerror = event => {
