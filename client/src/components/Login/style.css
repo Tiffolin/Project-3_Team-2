@@ -1,8 +1,10 @@
 .styleformWrap{
     margin-top:20%;
-    background:rgba(0,0,0, .2);
-    border:2px solid white;
+    /* background:rgba(0,0,0, .2); */
+    /* border:2px solid white; */
+    background:#4c9a00;
     border-radius:5px;
+    opacity:0.9;
 }
 .StyleloginWrap{
     display:inline-block;
@@ -16,7 +18,7 @@
 }
 
 .login label{
-    color:white;
+    color:black;
     margin-left:11px;
 }
 
@@ -28,6 +30,7 @@ border-radius:5px;
 .login button{
 float:right;
 margin-right:11px;
+background:lightgoldenrodyellow;
 }
 
 

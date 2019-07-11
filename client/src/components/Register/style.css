@@ -1,8 +1,11 @@
-.styleformWrap{
+.styleRegisterWrap{
     margin-top:20%;
-    background:rgba(0,0,0, .2);
-    border:2px solid white;
+    /* background:rgba(0,0,0, .2); */
+    /* border:2px solid white; */
+    background:lightgoldenrodyellow;
     border-radius:5px;
+    opacity:0.9;
+
 }
 
 .styleregisterWrap{
@@ -18,7 +21,7 @@
 }
 
 .register label{
-    color:white;
+    color:green;
     margin-left:11px;
 }
 
@@ -30,6 +33,7 @@ border-radius:5px;
 .register button{
 float:right;
 margin-right:11px;
+background:green;
 }
 
 @media only screen and (max-width: 640px) {
