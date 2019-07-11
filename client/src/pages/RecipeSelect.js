@@ -54,7 +54,7 @@ class Speech extends Component {
             speech += this.state.instructions[i];
         }
 
-        window.responsiveVoice.speak(speech, "UK English Female", { rate: 1.2 }, { pitch: 2 }, { volume: 2 });
+        window.responsiveVoice.speak(speech, "UK English Female", { rate: 0.88 }, { pitch: 2 }, { volume: 2 });
     }
 
 
@@ -116,10 +116,11 @@ class Speech extends Component {
                         console.log(" ##########   RESUME works   ######### ")
                         window.responsiveVoice.resume();
                         recognition.end();
-                    }   
+                       
                 }
         
         }
+    
 
         recognition.onerror = event => {
             console.log("Error occurred in recognition: " + event.error)
