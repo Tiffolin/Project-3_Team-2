@@ -1,11 +1,17 @@
-.linkBtn {
+.StylelinkBtn {
     /* float: right; */
     border-radius:5px;
     padding:12px;
     color:lightgoldenrodyellow;
     padding-left:25px;
+    background-color: green !important;
+    
+    /* border-radius:5px;
+    padding:12px;
+    color:lightgoldenrodyellow;
+    padding-left:25px;
     background-color:green;
-    margin-right:8px;
+    margin-right:8px; */
   }
 
   @media only screen and (max-width: 640px) {
