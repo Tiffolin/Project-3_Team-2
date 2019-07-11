@@ -9,7 +9,9 @@
 }
 
 .styleLogin{
-        border:2px solid white;
+    padding:20px;
+    border:2px;
+    border:2px solid white;
 }
 
 .login label{
@@ -28,6 +30,8 @@ margin-right:11px;
 }
 
 
-/* @media only screen and (max-width: 640px) {
-
-  }; */
+@media only screen and (max-width: 640px) {
+    .login{
+        float:left;
+    }
+  };
