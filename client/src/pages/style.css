@@ -1,12 +1,13 @@
 .styleRecipeSelect {
-    margin-top: 20%;
-    background-color: white;
+    margin-top: 5%;
+    /* background-color: white; */
     border-radius: 5px;
     padding: 20px;
 }
 
 .playBtn {
     float: right;
+    
     border-radius: 5px;
     padding: 10px;
     padding-left:40px;
