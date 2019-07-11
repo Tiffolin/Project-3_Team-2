@@ -23,7 +23,6 @@ class Speech extends Component {
         super()
         this.state = {
             listening: false,
-            // input: "",
             recipe: {},
             ingredients: [],
             instructions: [],
@@ -103,32 +102,25 @@ class Speech extends Component {
             console.log('stopCmd -----', stopCmd);
             // console.log(stopCmd[0]);
             // console.log(stopCmd[1]);
-            for (var i = 0; i < stopCmd.length; i++) {
-                console.log("   **********   " + stopCmd[i]);
-                if (stopCmd[i] === 'stop') {
+            // for (var i = 0; i < stopCmd.length; i++) {
+                console.log("   **********   " + stopCmd[0]);
+                if (stopCmd[0] === 'stop') {
                     recognition.stop();
                     recognition.onend = () => {
                         console.log('Stopped listening per command');
                         window.responsiveVoice.cancel();
                     }
-                } else if (stopCmd[i] === 'pause') {
-                    recognition.onresult = () => {
+                } else if (transcriptArr.includes('pause')) {
                         console.log(" ##########   pause works   ######### ");
-                        window.responsiveVoice.pause().then(function (e) {
-                            recognition.stop();
-                            recognition.onend = () => {
-                                console.log('Paused listening per command, now it will start listening again');
-                                recognition.start();
-                            }
-                        })
-                    }
-                } else if (stopCmd[i] === 'resume') {
-                    recognition.onresult = () => {
+                        // recognition.stop();
+                        window.responsiveVoice.pause();
+
+                } else if (transcriptArr.includes('play')) {
+                
                         console.log(" ##########   RESUME works   ######### ")
                         window.responsiveVoice.resume();
-                    }
                 }
-            }
+            // }
         }
 
         recognition.onerror = event => {
