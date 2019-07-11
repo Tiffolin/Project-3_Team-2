@@ -38,11 +38,9 @@ app.use(routes);
 
 
 // mongoose.connect("mongodb://localhost/projectrecipes", { useNewUrlParser: true });
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-// mongoose.connect(MONGODB_URI);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://recipe_recite:recipe1@ds349857.mlab.com:49857/heroku_hk9qfwn9");
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://recipe_recite:recipe1@ds349857.mlab.com:49857/heroku_hk9qfwn9")
 
 //botkit - the brain of this bot lives in the controllers folder
 require('./controllers/botkitcontroller')
