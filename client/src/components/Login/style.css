@@ -1,17 +1,21 @@
-.login{
+.login-container{
     /* position: absolute;
     right:0px;
     top:20px; */
     float:left;
-    background:rgba(0,0,0, .2);
-    border-radius:5px;
-    padding:20px;
-}
 
-.styleLogin{
     padding:20px;
     border:2px;
     border:2px solid white;
+    background:rgba(0,0,0, .2);
+    border-radius:5px;
+}
+
+.styleLogin{
+
+    border-radius:5px;
+    padding:20px;
+
 }
 
 .login label{

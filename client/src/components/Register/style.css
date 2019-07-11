@@ -1,16 +1,20 @@
-.register{
+.register-container{
     /* position: absolute;
     left:0px;
     top:20px; */
     float:right;
+    
+    padding:20px;
+    border:2px;
+    border:2px solid white;
     background:rgba(0,0,0, .2);
     border-radius:5px;
-    padding:20px;
-
 }
 
 .styleRegister{
-    border:2px solid white;
+
+    border-radius:5px;
+    padding:20px;
 }
 
 .register label{
