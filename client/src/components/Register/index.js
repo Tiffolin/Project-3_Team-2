@@ -5,9 +5,21 @@ import "./style.css";
 function Register(props) {
 return (
 
+
 <div className="register styleRegisterWrap">
-  <div className="register-container styleregisterWrap">
+  <div className="register-container styleRegisterSubWrap">
+
+    {props.status===1 ? 
+                <div className="styleUserExists">
+                {props.message}
+                </div> 
+                : 
+                <div className="styleRegisterMsg">
+                {props.message}
+                </div>}
+
   <form className="register styleRegister">
+  
             <div className="form-group">
                 <label htmlFor="title"><h4>REGISTER</h4></label>
                 <input
@@ -34,6 +46,8 @@ return (
                 submit
                 </button>
             </div>
+
+
         </form>
   </div>
 </div>

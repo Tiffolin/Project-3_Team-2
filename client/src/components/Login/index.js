@@ -4,9 +4,20 @@ import "./style.css";
 function Login(props) {
 return (
 
-<div className="login styleformWrap">
-  <div className="login-container StyleloginWrap">
+<div className="login styleLoginWrap">
+  <div className="login-container styleLoginSubWrap">
+
+  {props.status===1 ? 
+  <div className="styleLoginError">
+  {props.message}
+  </div> 
+  : 
+  <div className="styleLoggedMsg">
+  {props.message}
+  </div>} 
+
   <form className="login styleLogin">
+
             <div className="form-group">
                 <label htmlFor="title"><h4>LOGIN</h4></label>
                 <input
@@ -33,6 +44,7 @@ return (
                 submit
                 </button>
             </div>
+            
         </form>
   </div>
 </div>

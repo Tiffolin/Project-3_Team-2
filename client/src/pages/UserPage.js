@@ -8,13 +8,30 @@ import API from "../utils/API";
 import Login from "../components/Login";
 import Register from "../components/Register";
 
+
 class User extends Component {
     state = {
       regusername:"",
       regpassword:"",
       logusername:"",
       logpassword:"",
+      registered: 0,
+      regmessage: "",
+      login: 0,
+      logmessage: "",
     };
+
+    componentDidMount() {
+        API.checkToken()
+            .then(res => {
+            if (res.status === 200) {
+              this.props.history.push('/Search');
+            } 
+            })
+            .catch(err => {
+            console.error(err);
+            });
+    }
 
     handleInputChange = (event) => {
         const { value, name } = event.target;
@@ -40,6 +57,16 @@ class User extends Component {
             username: this.state.regusername,
             password: this.state.regpassword
         })
+        .then(res => {
+        if (res.status === 201) {
+          this.setState({registered: 2})
+          this.setState({regmessage: res.data})
+        } else {
+          this.setState({registered: 1})
+          this.setState({regmessage: res.data})
+        }
+        console.log( this.state.registered, this.state.regmessage)
+      })
     };
 
     handleLoginSubmit = event => {
@@ -49,12 +76,13 @@ class User extends Component {
             password: this.state.logpassword
         })
         .then(res => {
-        if (res.status === 200) {
-        this.props.history.push('/');
+        if (res.status === 201) {
+          window.location.reload()
         } else {
-        const error = new Error(res.error);
-        throw error;
+          this.setState({login: 1})
+          this.setState({logmessage: res.data})
         }
+        console.log( this.state.login, this.state.logmessage)
     })
     };
 
@@ -69,6 +97,7 @@ class User extends Component {
 
     render() {
         return (
+
           <Container>
        
             <Row>
@@ -79,23 +108,30 @@ class User extends Component {
                     handleRegisterChange={this.handleInputChange}
                     username={this.state.regusername}
                     password={this.state.regpassword}
+                    message={this.state.regmessage}
+                    status={this.state.registered}
                     />
+
                   
                   </Col>
                           
                 <Col size="lg-4 sm-12">
                 
+                     
                   <Login
                     handleLoginSubmit={this.handleLoginSubmit}
                     handleLoginChange={this.handleInputChange}
                     username={this.state.logusername}
                     password={this.state.logpassword}
+                    message={this.state.logmessage}
+                    status={this.state.login}
                     />
                   
                 </Col>
             </Row>
 
           </Container>
+
         )
     }
 }
