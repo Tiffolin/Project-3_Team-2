@@ -1,5 +1,5 @@
 # Recipe Recite 
-**Access the live site** [Here](#)
+**Access the live site** [Here](https://recipe-recite-app.herokuapp.com/)
 
 #### Utilize text to speech Cloud API to recite recipes out loud to the users while they are cooking in the kitchen. Simple voice commands inputs include ‘pause’, ‘play’ and ‘stop’. The app scrapes information from https://www.allrecipes.com. 
 
